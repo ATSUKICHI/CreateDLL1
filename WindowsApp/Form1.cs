@@ -30,11 +30,9 @@ namespace WindowsApp
 
         private void Form1_Load(object sender, EventArgs e)
         {
-        
             callAdd(display);
             callArr_a(display);
             callArr_b(display);
-            Console.WriteLine("test");
             //Console.ReadKey();
         }
 
@@ -45,9 +43,6 @@ namespace WindowsApp
 
             textbox.Text = "== add ==" + "\r\n";
             textbox.AppendText(addResult + "\r\n");
-
-            Console.WriteLine("== add ==");
-            Console.WriteLine(addResult + "\n");
         }
 
         // 戻り値がポインタの場合
@@ -67,14 +62,11 @@ namespace WindowsApp
             //Marshal.FreeCoTaskMem(ptr);
 
             textbox.AppendText("== arr_a ==" + "\r\n");
-            Console.WriteLine("== arr_a ==");
             foreach (int n in arr)
             {
                 textbox.AppendText(n + " ");
-                Console.Write(n + " ");
             }
             textbox.AppendText("\r\n");
-            Console.WriteLine("\n");
         }
 
         // 引数がポインタの場合
@@ -96,14 +88,11 @@ namespace WindowsApp
             Marshal.FreeCoTaskMem(ptr);
 
             textbox.AppendText("== arr_b ==" + "\r\n");
-            Console.WriteLine("== arr_b ==");
             foreach (int n in arr)
             {
                 textbox.AppendText(n + " ");
-                Console.Write(n + " ");
             }
             textbox.AppendText("\r\n");
-            Console.WriteLine("\n");
         }
     }
 }
